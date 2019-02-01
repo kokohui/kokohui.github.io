@@ -1,0 +1,776 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="KongHui">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">KONGHUI</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/DRF框架/">DRF框架</a></li><li><a class="category-link" href="/categories/Django-信号/">Django - 信号</a></li><li><a class="category-link" href="/categories/Python/">Python</a></li><li><a class="category-link" href="/categories/Redis/">Redis</a></li><li><a class="category-link" href="/categories/其他/">其他</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/kokohui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.cnblogs.com/konghui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>缓存</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>[TOC]</p>
+<h1 id="Python操作Redis"><a href="#Python操作Redis" class="headerlink" title="Python操作Redis"></a>Python操作Redis</h1><p>redis是一个key-value存储系统。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sorted set –有序集合)和hash（哈希类型）。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，redis支持各种不同方式的排序。与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。</p>
+<h2 id="一-Redis安装和基本使用"><a href="#一-Redis安装和基本使用" class="headerlink" title="一. Redis安装和基本使用"></a>一. Redis安装和基本使用</h2><pre><code>wget http://download.redis.io/releases/redis-3.0.6.tar.gz
+tar xzf redis-3.0.6.tar.gz
+cd redis-3.0.6
+make
+</code></pre><p>启动服务端</p>
+<pre><code>src/redis-server
+</code></pre><p>启动客户端</p>
+<pre><code>src/redis-cli
+redis&gt; set foo bar
+OK
+redis&gt; get foo
+&quot;bar&quot;
+</code></pre><p>redis作为windows服务启动方式</p>
+<pre><code>redis-server --service-install redis.windows.conf
+启动服务：redis-server --service-start
+停止服务：redis-server --service-stop
+</code></pre><h2 id="二-Python操作Redis"><a href="#二-Python操作Redis" class="headerlink" title="二. Python操作Redis"></a>二. Python操作Redis</h2><pre><code>sudo pip install redis
+or
+sudo easy_install redis
+or
+源码安装
+
+详见：https://github.com/WoLpH/redis-py
+</code></pre><h3 id="API使用"><a href="#API使用" class="headerlink" title="API使用"></a>API使用</h3><p>redis-py 的API的使用可以分类为：</p>
+<ul>
+<li>连接方式</li>
+<li>连接池</li>
+<li>操作<ul>
+<li>String 操作</li>
+<li>Hash 操作</li>
+<li>List 操作</li>
+<li>Set 操作</li>
+<li>Sort Set 操作</li>
+</ul>
+</li>
+<li>管道</li>
+<li>发布订阅</li>
+</ul>
+<h3 id="1、操作模式"><a href="#1、操作模式" class="headerlink" title="1、操作模式"></a>1、操作模式</h3><p>redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令，Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。</p>
+<pre><code>import redis
+
+r = redis.Redis(host=&apos;10.211.55.4&apos;, port=6379)
+r.set(&apos;foo&apos;, &apos;Bar&apos;)
+print r.get(&apos;foo&apos;)
+</code></pre><h3 id="2、连接池"><a href="#2、连接池" class="headerlink" title="2、连接池"></a>2、连接池</h3><p>redis-py使用connection pool来管理对一个redis server的所有连接，避免每次建立、释放连接的开销。默认，每个Redis实例都会维护一个自己的连接池。可以直接建立一个连接池，然后作为参数Redis，这样就可以实现多个Redis实例共享一个连接池。</p>
+<pre><code>import redis
+
+pool = redis.ConnectionPool(host=&apos;10.211.55.4&apos;, port=6379)
+
+r = redis.Redis(connection_pool=pool)
+r.set(&apos;foo&apos;, &apos;Bar&apos;)
+print r.get(&apos;foo&apos;)
+</code></pre><h3 id="3、Django配置Redis"><a href="#3、Django配置Redis" class="headerlink" title="3、Django配置Redis"></a>3、Django配置Redis</h3><p>安装</p>
+<pre><code>pip install django-redis
+</code></pre><p>配置</p>
+<pre><code>CACHES = {
+    &quot;default&quot;: {
+        &quot;BACKEND&quot;: &quot;django_redis.cache.RedisCache&quot;,
+        &quot;LOCATION&quot;: &quot;redis://127.0.0.1:6379&quot;,
+        &quot;OPTIONS&quot;: {
+            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+            &quot;CONNECTION_POOL_KWARGS&quot;: {&quot;max_connections&quot;: 100},
+            # &quot;PASSWORD&quot;: &quot;密码&quot;,
+            &quot;DECODE_RESPONSES&quot;:True
+        }
+    },
+}
+</code></pre><p>使用</p>
+<pre><code>import django_redis
+CACHE = django_redis.get_redis_connection()
+...
+CACHE.set(key, value)
+...
+</code></pre><h3 id="4、操作"><a href="#4、操作" class="headerlink" title="4、操作"></a>4、操作</h3><h4 id="String操作"><a href="#String操作" class="headerlink" title="String操作"></a>String操作</h4><p>redis中的String在内存中按照一个那么对应一个value来存储,<br>一个name 对应一个或多个 字符串形式的value</p>
+<p>———–String增————</p>
+<p>set(name, value, ex=None, px=None, nx=False, xx=False)</p>
+<pre><code>在Redis中设置值，默认，不存在则创建，存在则修改
+参数：
+ ex，过期时间（秒）
+ px，过期时间（毫秒）
+ nx，如果设置为True，则只有name不存在时，当前set操作才执行
+ xx，如果设置为True，则只有name存在时，岗前set操作才执行
+</code></pre><p>setnx(name, value)</p>
+<pre><code>设置值，只有name不存在时，执行设置操作（添加）
+</code></pre><p>setex(name, value, time)</p>
+<pre><code># 设置值
+# 参数：
+    # time，过期时间（数字秒 或 timedelta对象）
+</code></pre><p>psetex(name, time_ms, value)</p>
+<pre><code># 设置值
+# 参数：
+    # time_ms，过期时间（数字毫秒 或 timedelta对象）
+</code></pre><p>mset(*args, **kwargs)</p>
+<pre><code>批量设置值
+如：
+    mset(k1=&apos;v1&apos;, k2=&apos;v2&apos;)
+    或
+    mget({&apos;k1&apos;: &apos;v1&apos;, &apos;k2&apos;: &apos;v2&apos;})
+</code></pre><p>———–String查————</p>
+<p>getset(name, value)</p>
+<pre><code>设置新值并获取原来的值
+</code></pre><p>getrange(key, start, end)</p>
+<pre><code># 获取子序列（根据字节获取，非字符）
+# 参数：
+    # name，Redis 的 name
+    # start，起始位置（字节）
+    # end，结束位置（字节）
+# 如： &quot;孔辉&quot; ，0-3表示 &quot;孔&quot;
+</code></pre><p>getbit(name, offset)</p>
+<pre><code># 获取name对应的值的二进制表示中的某位的值 （0或1）
+</code></pre><p>bitcount(key, start=None, end=None)</p>
+<pre><code># 获取name对应的值的二进制表示中 1 的个数
+# 参数：
+    # key，Redis的name
+    # start，位起始位置
+    # end，位结束位置
+</code></pre><p>bitop(operation, dest, *keys)</p>
+<pre><code># 获取多个值，并将值做位运算，将最后的结果保存至新的name对应的值
+
+# 参数：
+# operation,AND（并） 、 OR（或） 、 NOT（非） 、 XOR（异或）
+# dest, 新的Redis的name
+# *keys,要查找的Redis的name
+
+# 如：
+bitop(&quot;AND&quot;, &apos;new_name&apos;, &apos;n1&apos;, &apos;n2&apos;, &apos;n3&apos;)
+# 获取Redis中n1,n2,n3对应的值，然后讲所有的值做位运算（求并集），然后将结果保存 new_name 对应的值中
+</code></pre><p>strlen(name)</p>
+<pre><code># 返回name对应值的字节长度（一个汉字3个字节）
+</code></pre><p>———–String改————</p>
+<p>setrange(name, offset, value)</p>
+<pre><code># 修改字符串内容，从指定字符串索引开始向后替换（新值太长时，则向后添加）
+# 参数：
+    # offset，字符串的索引，字节（一个汉字三个字节）
+    # value，要设置的值
+</code></pre><p>setbit(name, offset, value)</p>
+<pre><code># 对name对应值的二进制表示的位进行操作
+
+# 参数：
+# name，redis的name
+# offset，位的索引（将值变换成二进制后再进行索引）
+# value，值只能是 1 或 0
+
+# 注：如果在Redis中有一个对应： n1 = &quot;foo&quot;，
+    那么字符串foo的二进制表示为：01100110 01101111 01101111
+所以，如果执行 setbit(&apos;n1&apos;, 7, 1)，则就会将第7位设置为1，
+    那么最终二进制则变成 01100111 01101111 01101111，即：&quot;goo&quot;
+
+# 扩展，转换二进制表示：
+
+# source = &quot;武沛齐&quot;
+source = &quot;foo&quot;
+
+for i in source:
+    num = ord(i)
+    print bin(num).replace(&apos;b&apos;,&apos;&apos;)
+
+特别的，如果source是汉字 &quot;武沛齐&quot;怎么办？
+答：对于utf-8，每一个汉字占 3 个字节，那么 &quot;武沛齐&quot; 则有 9个字节
+   对于汉字，for循环时候会按照 字节 迭代，那么在迭代时，将每一个字节转换 十进制数，然后再将十进制数转换成二进制
+    11100110 10101101 10100110 11100110 10110010 10011011 11101001 10111101 10010000
+</code></pre><p>incr(self, name, amount=1)</p>
+<pre><code># 自增 name对应的值，当name不存在时，则创建name＝amount，否则，则自增。
+
+# 参数：
+    # name,Redis的name
+    # amount,自增数（必须是整数）
+
+# 注：同incrby
+</code></pre><p>incrbyfloat(self, name, amount=1.0)</p>
+<pre><code># 自增 name对应的值，当name不存在时，则创建name＝amount，否则，则自增。
+
+# 参数：
+    # name,Redis的name
+    # amount,自增数（浮点型）
+</code></pre><p>decr(self, name, amount=1)</p>
+<pre><code># 自减 name对应的值，当name不存在时，则创建name＝amount，否则，则自减。
+
+# 参数：
+    # name,Redis的name
+    # amount,自减数（整数）
+</code></pre><p>append(key, value)</p>
+<pre><code># 在redis name对应的值后面追加内容
+
+# 参数：
+    key, redis的name
+    value, 要追加的字符串
+</code></pre><hr>
+<h4 id="Hash操作"><a href="#Hash操作" class="headerlink" title="Hash操作"></a>Hash操作</h4><p>一个name 对应一个或多个字典形式的value</p>
+<p>——-Hash 增——–</p>
+<p>hset(name, key, value)</p>
+<pre><code># name对应的hash中设置一个键值对（不存在，则创建；否则，修改）
+
+# 参数：
+    # name，redis的name
+    # key，name对应的hash中的key
+    # value，name对应的hash中的value
+
+# 注：
+    # hsetnx(name, key, value),当name对应的hash中不存在当前key时则创建（相当于添加）
+</code></pre><p>hmset(name, mapping)</p>
+<pre><code># 在name对应的hash中批量设置键值对
+
+# 参数：
+    # name，redis的name
+    # mapping，字典，如：{&apos;k1&apos;:&apos;v1&apos;, &apos;k2&apos;: &apos;v2&apos;}
+
+# 如：
+    # r.hmset(&apos;xx&apos;, {&apos;k1&apos;:&apos;v1&apos;, &apos;k2&apos;: &apos;v2&apos;})
+</code></pre><p>——-Hash 查——–</p>
+<p>hget(name,key)</p>
+<pre><code># 在name对应的hash中获取根据key获取value
+</code></pre><p>hmget(name, keys, *args)</p>
+<pre><code># 在name对应的hash中获取多个key的值
+
+# 参数：
+    # name，reids对应的name
+    # keys，要获取key集合，如：[&apos;k1&apos;, &apos;k2&apos;, &apos;k3&apos;]
+    # *args，要获取的key，如：k1,k2,k3
+
+# 如：
+    # r.mget(&apos;xx&apos;, [&apos;k1&apos;, &apos;k2&apos;])
+    # 或
+    # print r.hmget(&apos;xx&apos;, &apos;k1&apos;, &apos;k2&apos;)
+</code></pre><p>hgetall(name)</p>
+<pre><code>获取name对应hash的所有键值
+</code></pre><p>hlen(name)</p>
+<pre><code># 获取name对应的hash中键值对的个数
+</code></pre><p>hkeys(name)</p>
+<pre><code># 获取name对应的hash中所有的key的值
+</code></pre><p>hvals(name)</p>
+<pre><code># 获取name对应的hash中所有的value的值
+</code></pre><p>hexists(name, key)</p>
+<pre><code># 检查name对应的hash是否存在当前传入的key
+</code></pre><p>hscan(name, cursor=0, match=None, count=None)</p>
+<pre><code># 增量式迭代获取，对于数据大的数据非常有用，hscan可以实现分片的获取数据，并非一次性将数据全部获取完，从而放置内存被撑爆
+
+# 参数：
+    # name，redis的name
+    # cursor，游标（基于游标分批取获取数据）
+    # match，匹配指定key，默认None 表示所有的key
+    # count，每次分片最少获取个数，默认None表示采用Redis的默认分片个数
+
+# 如：
+    # 第一次：cursor1, data1 = r.hscan(&apos;xx&apos;, cursor=0, match=None, count=None)
+    # 第二次：cursor2, data1 = r.hscan(&apos;xx&apos;, cursor=cursor1, match=None, count=None)
+    # ...
+    # 直到返回值cursor的值为0时，表示数据已经通过分片获取完毕
+</code></pre><p>hscan_iter(name, match=None, count=None)</p>
+<pre><code># 利用yield封装hscan创建生成器，实现分批去redis中获取数据
+
+# 参数：
+    # match，匹配指定key，默认None 表示所有的key
+    # count，每次分片最少获取个数，默认None表示采用Redis的默认分片个数
+
+# 如：
+    # for item in r.hscan_iter(&apos;xx&apos;):
+    #     print item
+</code></pre><p>——-Hash 删——–</p>
+<p>hdel(name,*keys)</p>
+<pre><code># 将name对应的hash中指定key的键值对删除
+</code></pre><p>——-Hash 改——–</p>
+<p>hincrby(name, key, amount=1)</p>
+<pre><code># 自增name对应的hash中的指定key的值，不存在则创建key=amount
+# 参数：
+    # name，redis中的name
+    # key， hash对应的key
+    # amount，自增数（整数）
+</code></pre><p>hincrbyfloat(name, key, amount=1.0)</p>
+<pre><code># 自增name对应的hash中的指定key的值，不存在则创建key=amount
+
+# 参数：
+    # name，redis中的name
+    # key， hash对应的key
+    # amount，自增数（浮点数）
+
+# 自增name对应的hash中的指定key的值，不存在则创建key=amount
+</code></pre><h4 id="List操作"><a href="#List操作" class="headerlink" title="List操作"></a>List操作</h4><p>一个name 对应一个列表形式的value</p>
+<p>——- List 增 ——–</p>
+<p>lpush(name,values)</p>
+<pre><code># 在name对应的list中添加元素，每个新的元素都添加到列表的最左边
+
+# 如：
+    # r.lpush(&apos;oo&apos;, 11,22,33)
+    # 保存顺序为: 33,22,11
+
+# 扩展：
+    # rpush(name, values) 表示从右向左操作
+</code></pre><p>lpushx(name,value)</p>
+<pre><code># 在name对应的list中添加元素，只有name已经存在时，值添加到列表的最左边
+
+# 更多：
+    # rpushx(name, value) 表示从右向左操作
+</code></pre><p>linsert(name, where, refvalue, value))</p>
+<pre><code># 在name对应的列表的某一个值前或后插入一个新值
+
+# 参数：
+    # name，redis的name
+    # where，BEFORE或AFTER
+    # refvalue，标杆值，即：在它前后插入数据
+    # value，要插入的数据
+</code></pre><p>r.lset(name, index, value)</p>
+<pre><code># 对name对应的list中的某一个索引位置重新赋值
+
+# 参数：
+    # name，redis的name
+    # index，list的索引位置
+    # value，要设置的值
+</code></pre><p>——- List 查 ——–</p>
+<p>llen(name)</p>
+<pre><code># name对应的list元素的个数
+</code></pre><p>lindex(name, index)</p>
+<pre><code>在name对应的列表中根据索引获取列表元素
+</code></pre><p>lrange(name, start, end)</p>
+<pre><code># 在name对应的列表分片获取数据
+# 参数：
+    # name，redis的name
+    # start，索引的起始位置
+    # end，索引结束位置
+</code></pre><p>——- List 删 ——–</p>
+<p>r.lrem(name, value, num)</p>
+<pre><code># 在name对应的list中删除指定的值
+
+# 参数：
+    # name，redis的name
+    # value，要删除的值
+    # num，  num=0，删除列表中所有的指定值；
+           # num=2,从前到后，删除2个；
+           # num=-2,从后向前，删除2个
+</code></pre><p>lpop(name)</p>
+<pre><code># 在name对应的列表的左侧获取第一个元素并在列表中移除，返回值则是第一个元素
+
+# 更多：
+    # rpop(name) 表示从右向左操作
+</code></pre><p>ltrim(name, start, end)</p>
+<pre><code># 在name对应的列表中移除没有在start-end索引之间的值
+# 参数：
+    # name，redis的name
+    # start，索引的起始位置
+    # end，索引结束位置
+</code></pre><p>——- List 改  ——–</p>
+<p>r.lset(name, index, value)</p>
+<pre><code># 对name对应的list中的某一个索引位置重新赋值
+
+# 参数：
+    # name，redis的name
+    # index，list的索引位置
+    # value，要设置的值
+</code></pre><p>rpoplpush(src, dst)</p>
+<pre><code># 从一个列表取出最右边的元素，同时将其添加至另一个列表的最左边
+# 参数：
+    # src，要取数据的列表的name
+    # dst，要添加数据的列表的name
+</code></pre><p>blpop(keys, timeout)</p>
+<pre><code># 从一个列表的右侧移除一个元素并将其添加到另一个列表的左侧
+
+# 参数：
+    # src，取出并要移除元素的列表对应的name
+    # dst，要插入元素的列表对应的name
+    # timeout，当src对应的列表中没有数据时，阻塞等待其有数据的超时时间（秒），0 表示永远阻塞
+</code></pre><p>自定义增量迭代</p>
+<pre><code># 由于redis类库中没有提供对列表元素的增量迭代，如果想要循环name对应的列表的所有元素，那么就需要：
+    # 1、获取name对应的所有列表
+    # 2、循环列表
+# 但是，如果列表非常大，那么就有可能在第一步时就将程序的内容撑爆，所有有必要自定义一个增量迭代的功能：
+
+def list_iter(name):
+    &quot;&quot;&quot;
+    自定义redis列表增量迭代
+    :param name: redis中的name，即：迭代name对应的列表
+    :return: yield 返回 列表元素
+    &quot;&quot;&quot;
+    list_count = r.llen(name)
+    for index in xrange(list_count):
+        yield r.lindex(name, index)
+
+# 使用
+for item in list_iter(&apos;pp&apos;):
+    print item
+</code></pre><h4 id="Set操作"><a href="#Set操作" class="headerlink" title="Set操作"></a>Set操作</h4><p>不允许重复的List,集合..</p>
+<p>sadd(name,values)</p>
+<pre><code># name对应的集合中添加元素
+</code></pre><p>scard(name)</p>
+<pre><code>获取name对应的集合中元素个数
+</code></pre><p>sdiff(keys, *args)</p>
+<pre><code>在第一个name对应的集合中且不在其他name对应的集合的元素集合
+</code></pre><p>sdiffstore(dest, keys, *args)</p>
+<pre><code># 获取第一个name对应的集合中且不在其他name对应的集合，再将其新加入到dest对应的集合中
+</code></pre><p>sinter(keys, *args)</p>
+<pre><code># 获取多一个name对应集合的并集
+</code></pre><p>sinterstore(dest, keys, *args)</p>
+<pre><code># 获取多一个name对应集合的并集，再讲其加入到dest对应的集合中
+</code></pre><p>sismember(name, value)</p>
+<pre><code># 检查value是否是name对应的集合的成员
+</code></pre><p>smembers(name)</p>
+<pre><code># 获取name对应的集合的所有成员
+</code></pre><p>smove(src, dst, value)</p>
+<pre><code># 将某个成员从一个集合中移动到另外一个集合
+</code></pre><p>spop(name)</p>
+<pre><code># 从集合的右侧（尾部）移除一个成员，并将其返回
+</code></pre><p>srandmember(name, numbers)</p>
+<pre><code># 从name对应的集合中随机获取 numbers 个元素
+</code></pre><p>srem(name, values)</p>
+<pre><code># 在name对应的集合中删除某些值
+</code></pre><p>sunion(keys, *args)</p>
+<pre><code># 获取多一个name对应的集合的并集
+</code></pre><p>sunionstore(dest,keys, *args)</p>
+<pre><code># 获取多一个name对应的集合的并集，并将结果保存到dest对应的集合中
+</code></pre><p>sscan(name, cursor=0, match=None, count=None)<br>sscan_iter(name, match=None, count=None)</p>
+<pre><code># 同字符串的操作，用于增量迭代分批获取元素，避免内存消耗太大
+</code></pre><h4 id="zset操作"><a href="#zset操作" class="headerlink" title="zset操作"></a>zset操作</h4><p>有序集合，在集合的基础上，为每元素排序；元素的排序需要根据另外一个值来进行比较，所以，对于有序集合，每一个元素有两个值，即：值和分数，分数专门用来做排序。</p>
+<p>zadd(name, *args, **kwargs)</p>
+<pre><code># 在name对应的有序集合中添加元素
+# 如：
+     # zadd(&apos;zz&apos;, &apos;n1&apos;, 1, &apos;n2&apos;, 2)
+     # 或
+     # zadd(&apos;zz&apos;, n1=11, n2=22)
+</code></pre><p>zcard(name)</p>
+<pre><code># 获取name对应的有序集合元素的数量
+</code></pre><p>zcount(name, min, max)</p>
+<pre><code># 获取name对应的有序集合中分数 在 [min,max] 之间的个数
+</code></pre><p>zincrby(name, value, amount)</p>
+<pre><code># 自增name对应的有序集合的 name 对应的分数
+</code></pre><p>r.zrange( name, start, end, desc=False, withscores=False, score_cast_func=float)</p>
+<pre><code># 按照索引范围获取name对应的有序集合的元素
+
+# 参数：
+    # name，redis的name
+    # start，有序集合索引起始位置（非分数）
+    # end，有序集合索引结束位置（非分数）
+    # desc，排序规则，默认按照分数从小到大排序
+    # withscores，是否获取元素的分数，默认只获取元素的值
+    # score_cast_func，对分数进行数据转换的函数
+
+# 更多：
+    # 从大到小排序
+    # zrevrange(name, start, end, withscores=False, score_cast_func=float)
+
+    # 按照分数范围获取name对应的有序集合的元素
+    # zrangebyscore(name, min, max, start=None, num=None, withscores=False, score_cast_func=float)
+    # 从大到小排序
+    # zrevrangebyscore(name, max, min, start=None, num=None, withscores=False, score_cast_func=float)
+</code></pre><p>zrank(name, value)</p>
+<pre><code># 获取某个值在 name对应的有序集合中的排行（从 0 开始）
+
+# 更多：
+    # zrevrank(name, value)，从大到小排序
+</code></pre><p>zrangebylex(name, min, max, start=None, num=None)</p>
+<pre><code># 当有序集合的所有成员都具有相同的分值时，有序集合的元素会根据成员的 值 （lexicographical ordering）来进行排序，而这个命令则可以返回给定的有序集合键 key 中， 元素的值介于 min 和 max 之间的成员
+# 对集合中的每个成员进行逐个字节的对比（byte-by-byte compare）， 并按照从低到高的顺序， 返回排序后的集合成员。 如果两个字符串有一部分内容是相同的话， 那么命令会认为较长的字符串比较短的字符串要大
+
+# 参数：
+    # name，redis的name
+    # min，左区间（值）。 + 表示正无限； - 表示负无限； ( 表示开区间； [ 则表示闭区间
+    # min，右区间（值）
+    # start，对结果进行分片处理，索引位置
+    # num，对结果进行分片处理，索引后面的num个元素
+
+# 如：
+    # ZADD myzset 0 aa 0 ba 0 ca 0 da 0 ea 0 fa 0 ga
+    # r.zrangebylex(&apos;myzset&apos;, &quot;-&quot;, &quot;[ca&quot;) 结果为：[&apos;aa&apos;, &apos;ba&apos;, &apos;ca&apos;]
+
+# 更多：
+    # 从大到小排序
+    # zrevrangebylex(name, max, min, start=None, num=None)
+</code></pre><p>zrem(name, values)</p>
+<pre><code># 删除name对应的有序集合中值是values的成员
+
+# 如：zrem(&apos;zz&apos;, [&apos;s1&apos;, &apos;s2&apos;])
+</code></pre><p>zremrangebyrank(name, min, max)</p>
+<pre><code># 根据排行范围删除
+</code></pre><p>zremrangebyscore(name, min, max)</p>
+<pre><code># 根据分数范围删除
+</code></pre><p>zremrangebylex(name, min, max)</p>
+<pre><code># 根据值返回删除
+</code></pre><p>zscore(name, value)</p>
+<pre><code># 获取name对应有序集合中 value 对应的分数
+</code></pre><p>zinterstore(dest, keys, aggregate=None)</p>
+<pre><code># 获取两个有序集合的交集，如果遇到相同值不同分数，则按照aggregate进行操作
+# aggregate的值为:  SUM  MIN  MAX
+</code></pre><p>zunionstore(dest, keys, aggregate=None)</p>
+<pre><code># 获取两个有序集合的并集，如果遇到相同值不同分数，则按照aggregate进行操作
+# aggregate的值为:  SUM  MIN  MAX
+</code></pre><p>zscan(name, cursor=0, match=None, count=None, score_cast_func=float)<br>zscan_iter(name, match=None, count=None,score_cast_func=float)</p>
+<pre><code># 同字符串相似，相较于字符串新增score_cast_func，用来对分数进行操作
+</code></pre><h4 id="其他常用操作"><a href="#其他常用操作" class="headerlink" title="其他常用操作"></a>其他常用操作</h4><p>delete(*names)</p>
+<pre><code># 根据删除redis中的任意数据类型
+</code></pre><p>exists(name)</p>
+<pre><code># 检测redis的name是否存在
+</code></pre><p>keys(pattern=’*’)</p>
+<pre><code># 根据模型获取redis的name
+
+# 更多：
+    # KEYS * 匹配数据库中所有 key 。
+    # KEYS h?llo 匹配 hello ， hallo 和 hxllo 等。
+    # KEYS h*llo 匹配 hllo 和 heeeeello 等。
+    # KEYS h[ae]llo 匹配 hello 和 hallo ，但不匹配 hillo
+</code></pre><p>expire(name ,time)</p>
+<pre><code># 为某个redis的某个name设置超时时间
+</code></pre><p>rename(src, dst)</p>
+<pre><code># 对redis的name重命名为
+</code></pre><p>move(name, db))</p>
+<pre><code># 将redis的某个值移动到指定的db下
+</code></pre><p>randomkey()</p>
+<pre><code># 随机获取一个redis的name（不删除）
+</code></pre><p>type(name)</p>
+<pre><code># 获取name对应值的类型
+</code></pre><p>scan(cursor=0, match=None, count=None)<br>scan_iter(match=None, count=None)</p>
+<pre><code># 同字符串操作，用于增量迭代获取key
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/29/缓存/Redis/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/29/缓存/Redis/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="https://github.com/kokohui " style="border-bottom: none;">KongHui</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+
+    </div>
+</body>
+
+
+
+ 	
+</html>

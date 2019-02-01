@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="KongHui">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">KONGHUI</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/DRF框架/">DRF框架</a></li><li><a class="category-link" href="/categories/Django-信号/">Django - 信号</a></li><li><a class="category-link" href="/categories/Python/">Python</a></li><li><a class="category-link" href="/categories/Redis/">Redis</a></li><li><a class="category-link" href="/categories/其他/">其他</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/kokohui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.cnblogs.com/konghui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Django</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>[TOC]</p>
+<h1 id="Django-信号"><a href="#Django-信号" class="headerlink" title="Django - 信号"></a>Django - 信号</h1><p>Django 提供一个“信号分发器”，允许解耦的应用在框架的其它地方发生操作时会被通知到。 简单来说，信号允许特定的sender通知一组receiver某些操作已经发生。 这在多处代码和同一事件有关联的情况下很有用。</p>
+<p><code>django.db.models.signals</code> 模块定义了模型系统发送的一组信号。</p>
+<h2 id="一-模型信号"><a href="#一-模型信号" class="headerlink" title="一. 模型信号"></a>一. 模型信号</h2><pre><code>Model signals
+    pre_init                    # django的modal执行其构造方法前，自动触发
+    post_init                   # django的modal执行其构造方法后，自动触发
+    pre_save                    # django的modal对象保存前，自动触发
+    post_save                   # django的modal对象保存后，自动触发
+    pre_delete                  # django的modal对象删除前，自动触发
+    post_delete                 # django的modal对象删除后，自动触发
+    m2m_changed                 # django的modal中使用m2m字段操作第三张表（add,remove,clear）前后，自动触发
+    class_prepared              # 程序启动时，检测已注册的app中modal类，对于每一个类，自动触发
+    Management signals
+    pre_migrate                 # 执行migrate命令前，自动触发
+    post_migrate                # 执行migrate命令后，自动触发
+    Request/response signals
+    request_started             # 请求到来前，自动触发
+    request_finished            # 请求结束后，自动触发
+    got_request_exception       # 请求异常后，自动触发
+    Test signals
+    setting_changed             # 使用test测试修改配置文件时，自动触发
+    template_rendered           # 使用test测试渲染模板时，自动触发
+    Database Wrappers
+    connection_created          # 创建数据库连接时，自动触发
+</code></pre><h3 id="pre-init"><a href="#pre-init" class="headerlink" title="pre_init"></a>pre_init</h3><p>django.db.models.signals.pre_init<br>每当您实例化Django模型时，该信号都会在模型的<strong>init</strong>()方法的开头发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>刚创建了一个实例的模型类。<br><code>ARGS</code><br>传递给<strong>init</strong>()的位置参数列表：<br><code>kwargs</code><br>传递给<strong>init</strong>()的关键字参数的字典：</p>
+</blockquote>
+<p>例如：</p>
+<pre><code>from app01 import models
+
+p = models.Publisher(name=&apos;帅气的辉哥&apos;)
+</code></pre><p>发送到pre_init处理程序的参数将是：</p>
+<pre><code>sender:    Publisher（类本身）
+ARGS:    []（一个空列表，因为没有位置参数传__init__()。）
+kwargs:    {&apos;name&apos;： &apos;帅气的辉哥&apos;}
+</code></pre><h3 id="pre-save"><a href="#pre-save" class="headerlink" title="pre_save"></a>pre_save</h3><p><code>django.db.models.signals.pre_save</code><br>这是在模型的save()方法的开头发送的。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code> 模型类。</p>
+</blockquote>
+<blockquote>
+<p><code>instance</code> 正在保存的实际实例。</p>
+</blockquote>
+<blockquote>
+<p><code>raw</code> 一个布尔值True如果模型按照显示的方式保存（即当加载固定装置时）。 不应该查询/修改数据库中的其他记录，因为数据库可能尚未处于一致状态。</p>
+</blockquote>
+<blockquote>
+<p><code>using</code> 正在使用的数据库别名。<br>update_fields<br>如果有字段被传递给Model.save()方法那么就是所传递的字段集，否则就是None。</p>
+</blockquote>
+<h3 id="post-save"><a href="#post-save" class="headerlink" title="post_save"></a>post_save</h3><p><code>django.db.models.signals.post_save</code><br>像pre_save一样，但是在save()方法的末尾发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>模型类。</p>
+<p><code>instance</code><br>正在保存的实际实例。</p>
+<p><code>created</code><br>一个布尔值True如果创建了新记录。</p>
+<p><code>raw</code><br>一个布尔值True如果模型按照显示的方式保存（即当加载固定装置时）。 不应该查询/修改数据库中的其他记录，因为数据库可能尚未处于一致状态。</p>
+<p><code>using</code><br>正在使用的数据库别名。</p>
+<p><code>update_fields</code><br>如果有字段被传递给Model.save()方法那么就是所传递的字段集，否则就是None。</p>
+</blockquote>
+<h3 id="pre-delete"><a href="#pre-delete" class="headerlink" title="pre_delete"></a>pre_delete</h3><p><code>django.db.models.signals.pre_delete</code><br>在模型的delete()方法和queryset的delete()方法的开头发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>模型类。</p>
+<p><code>instance</code><br>正在删除的实际实例。</p>
+<p><code>using</code><br>正在使用的数据库别名。</p>
+</blockquote>
+<h3 id="post-delete"><a href="#post-delete" class="headerlink" title="post_delete"></a>post_delete</h3><p><code>django.db.models.signals.post_delete</code><br>像pre_delete一样，但是在模型的delete()方法和queryset的delete()方法的末尾发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>模型类。</p>
+<p><code>instance</code><br>正在删除的实际实例。</p>
+<p>请注意，该对象将不再位于数据库中，所以要非常小心使用此实例。</p>
+<p><code>using</code><br>正在使用的数据库别名。</p>
+</blockquote>
+<h3 id="m2m-changed"><a href="#m2m-changed" class="headerlink" title="m2m_changed"></a>m2m_changed</h3><p><code>django.db.models.signals.m2m_changed</code><br>django的modal中使用m2m字段操作第三张表（add,remove,clear）前后，自动触发</p>
+<p>在模型实例上更改了ManyToManyField时发送。 严格来说，这不是一个模型信号，因为它是由ManyToManyField发送的，但由于它补充了pre_save / post_save和pre_delete / post_delete当跟踪模型的更改时，它包括在这里。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>描述ManyToManyField的中间模型类。 当定义多对多字段时，此类自动创建；您可以使用多对多字段上的through属性访问它。</p>
+<p><code>instance</code><br>多对多关系更新的实例。 这可以是sender或ManyToManyField相关的类的一个实例。</p>
+<p><code>action</code><br>指示在关系上完成的更新类型的字符串。 这可以是以下之一：</p>
+<p><code>“pre_add”</code><br>在之前发送一个或多个对象被添加到关系中。</p>
+<p><code>“post_add”</code><br>在之后发送一个或多个对象被添加到关系中。</p>
+<p><code>“pre_remove”</code><br>在之前发送一个或多个对象从关系中删除。</p>
+<p><code>“post_remove”</code><br>在之后发送一个或多个对象从关系中删除。</p>
+<p><code>“pre_clear”</code><br>在之前发送关系被清除。</p>
+<p><code>“post_clear”</code><br>之后发送关系被清除。</p>
+<p><code>reverse</code><br>指示关系的哪一侧被更新（即，如果它是正在被修改的正向或反向关系）。</p>
+<p><code>model</code><br>添加到，从关系中删除或从关系中清除的对象的类。</p>
+<p><code>pk_set</code><br>对于pre_add，post_add，pre_remove和post_remove操作，这是一组主键值加入或从关系中删除。</p>
+<p>对于pre_clear和post_clear操作，这是None。</p>
+<p>using<br>正在使用的数据库别名。</p>
+</blockquote>
+<h3 id="class-prepared"><a href="#class-prepared" class="headerlink" title="class_prepared"></a>class_prepared</h3><p><code>django.db.models.signals.class_prepared</code><br>程序启动时，检测已注册的app中modal类，对于每一个类，自动触发</p>
+<p>每当模型类“准备”时发送 - ，一旦模型已经被定义并在Django的模型系统中注册。 Django内部使用这个信号；它通常不会用于第三方应用程序。</p>
+<p>由于此信号是在应用程序注册表群集进程期间发送的，并且在应用注册表完全填充后运行AppConfig.ready()，因此无法使用该方法连接接收器。 一种可能性是连接他们AppConfig.<strong>init</strong>()，注意不要导入模型或触发对应用程序注册表的调用。</p>
+<p>使用此信号发送的参数：</p>
+<blockquote>
+<p><code>sender</code></p>
+<p><code>ready的model类。</code></p>
+</blockquote>
+<h2 id="二-管理信号"><a href="#二-管理信号" class="headerlink" title="二. 管理信号"></a>二. 管理信号</h2><h3 id="pre-migrate"><a href="#pre-migrate" class="headerlink" title="pre_migrate"></a>pre_migrate</h3><p><code>django.db.models.signals.pre_migrate</code><br>在开始安装应用程序之前，由migrate命令发送。 对于缺少models模块的应用，不会发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>应用程序即将迁移/同步的AppConfig实例。</p>
+<p><code>APP_CONFIG</code><br>与sender相同。</p>
+<p><code>verbosity</code><br>指示manage.py在屏幕上打印多少信息。 有关详细信息，请参阅–verbosity标志。</p>
+<p>监听pre_migrate的函数应根据该参数的值调整输出到屏幕的内容。</p>
+<p><code>interactive</code><br>如果interactive是True，则可以安全地提示用户在命令行中输入内容。 如果interactive为False，则侦听此信号的功能不应尝试提示任何内容。</p>
+<p>例如，当interactive为True时，django.contrib.auth应用程序仅提示创建超级用户。</p>
+<p><code>using</code><br>命令将在其上运行的数据库的别名。</p>
+<p><code>plan</code><br>Django中的新功能1.10。<br>迁移计划将用于迁移运行。 虽然该计划不是公共API，但这在允许罕见的情况下需要知道计划。 一个计划是两个元组的列表，第一个项目是迁移类的实例，第二个项目显示迁移是否回滚（True）或应用（False</p>
+<p><code>apps</code><br>Django中的新功能1.10。<br>包含迁移运行前的项目状态的Apps的实例。 应该使用它来代替全局apps注册表来检索要执行操作的模型。</p>
+</blockquote>
+<h3 id="post-migrate"><a href="#post-migrate" class="headerlink" title="post_migrate"></a>post_migrate</h3><p><code>django.db.models.signals.post_migrate</code><br>在migrate（即使不进行迁移）和flush命令的末尾发送。 对于缺少models模块的应用，不会发送。</p>
+<p>此信号的处理程序不得执行数据库模式更改，因为如果在migrate命令期间运行，则可能会导致flush命令失败。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>刚刚安装的应用程序的AppConfig实例。</p>
+<p><code>APP_CONFIG</code><br>与sender相同。</p>
+<p><code>verbosity</code><br>指示manage.py在屏幕上打印多少信息。 有关详细信息，请参阅–verbosity标志。</p>
+<p>监听post_migrate的函数应根据此参数的值调整输出到屏幕的内容。</p>
+<p><code>interactive</code><br>如果interactive是True，则可以安全地提示用户在命令行中输入内容。 如果interactive为False，则侦听此信号的功能不应尝试提示任何内容。</p>
+<p>例如，当interactive为True时，django.contrib.auth应用程序仅提示创建超级用户。</p>
+<p><code>using</code><br>用于同步的数据库别名。 默认为default数据库。</p>
+<p><code>plan</code><br>Django中的新功能1.10。<br>用于迁移运行的迁移计划。 虽然该计划不是公共API，但这在允许罕见的情况下需要知道计划。 一个计划是两个元组的列表，第一个项目是迁移类的实例，第二个项目显示迁移是否回滚（True）或应用（False</p>
+<p><code>apps</code><br>Django中的新功能1.10。<br>包含迁移运行后项目状态的Apps的实例。 应该使用它来代替全局apps注册表来检索要执行操作的模型。</p>
+</blockquote>
+<h2 id="三-请求-响应信号"><a href="#三-请求-响应信号" class="headerlink" title="三. 请求/响应信号"></a>三. 请求/响应信号</h2><p>处理请求时由核心框架发送的信号。</p>
+<h3 id="request-started"><a href="#request-started" class="headerlink" title="request_started"></a>request_started</h3><p><code>django.core.signals. request_started</code><br>当Django开始处理HTTP请求时发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>处理程序类 - 例如django.core.handlers.wsgi.WsgiHandler - 处理该请求。</p>
+<p><code>ENVIRON</code><br>environ字典提供给请求。</p>
+</blockquote>
+<h3 id="request-finished"><a href="#request-finished" class="headerlink" title="request_finished"></a>request_finished</h3><p><code>django.core.signals.request_finished</code><br>当Django完成向客户端传递HTTP响应时发送。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>处理程序类，如上。</p>
+</blockquote>
+<h3 id="got-request-except"><a href="#got-request-except" class="headerlink" title="got_request _except"></a>got_request _except</h3><p><code>django.core.signals. got_request_exception</code><br>当Django在处理传入的HTTP请求时遇到异常时，会发送此信号。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>处理程序类，如上。</p>
+<p><code>request</code><br>HttpRequest对象。</p>
+</blockquote>
+<h2 id="四-测试信号"><a href="#四-测试信号" class="headerlink" title="四. 测试信号"></a>四. 测试信号</h2><p>信号只在running tests时发送。</p>
+<h3 id="setting-changet"><a href="#setting-changet" class="headerlink" title="setting_changet"></a>setting_changet</h3><p><code>django.test.signals.setting_changed</code><br>当通过django.test.TestCase.settings()上下文管理器或django.test.override_settings()装饰器/上下文管理器</p>
+<p>实际发送两次：应用新值（“setup”）和恢复原始值（“拆除”）时。 使用enter参数来区分两者。</p>
+<p>您还可以从django.core.signals导入此信号，以避免在非测试情况下从django.test导入。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>设置处理程序。</p>
+<p><code>setting</code><br>设置的名称。</p>
+<p><code>value</code><br>更改后的设置值。 对于最初不存在的设置，在“拆卸”阶,value为None。</p>
+<p><code>enter</code><br>一个布尔值True如果应用设置，False如果还原。</p>
+</blockquote>
+<h3 id="template-rendered"><a href="#template-rendered" class="headerlink" title="template_rendered"></a>template_rendered</h3><p><code>django.test.signals.template_rendered`</code><br>测试系统呈现模板时发送。 在Django服务器的正常操作期间不发出此信号 - 它仅在测试期间可用。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>被渲染的Template对象。</p>
+<p><code>template</code><br>与发信人相同</p>
+<p><code>context</code><br>模板呈现的Context。</p>
+</blockquote>
+<h2 id="五-数据库包装器"><a href="#五-数据库包装器" class="headerlink" title="五. 数据库包装器"></a>五. 数据库包装器</h2><p>当数据库连接启动时，由数据库包装器发送的信号。</p>
+<h3 id="connection-created"><a href="#connection-created" class="headerlink" title="connection_created"></a>connection_created</h3><p><code>django.db.backends.signals.connection_created</code><br>当数据库包装器与数据库进行初始连接时发送。 如果您想将任何后续连接命令发送到SQL后端，这一点尤其有用。</p>
+<p>带有此信号的参数：</p>
+<blockquote>
+<p><code>sender</code><br>数据库包装器类 - 即django.db.backends.postgresql.DatabaseWrapper或django.db.backends.mysql.DatabaseWrapper等</p>
+<p><code>connection</code><br>打开的数据库连接。 这可以在多数据库配置中使用，以区分来自不同数据库的连接信号。</p>
+</blockquote>
+<h2 id="六-使用信号"><a href="#六-使用信号" class="headerlink" title="六. 使用信号"></a>六. 使用信号</h2><h3 id="Rcceiver函数"><a href="#Rcceiver函数" class="headerlink" title="Rcceiver函数"></a>Rcceiver函数</h3><p>Receiver可以是任何Python函数或者方法：</p>
+<pre><code>def my_callback(sender, **kwargs):
+    print(sender)
+    print(kwargs)
+    print(&quot;要保存了啊！&quot;)
+    print(&apos;-&apos; * 120)
+</code></pre><h3 id="监听信号"><a href="#监听信号" class="headerlink" title="监听信号"></a>监听信号</h3><p>一旦某个指定信号触发，就执行我指定的receiver函数。</p>
+<p>我们现在的需求是，模型层一执行保存的动作就做什么事。</p>
+<p>所以应该是一旦触发 pre_save 信号就执行 my_callback，对于内置的信号Django框架会自动帮我们触发，我们只需要告诉它信号触发之后做什么事就可以了：</p>
+<pre><code>pre_save.connect(my_callback)
+</code></pre><p>接下来，只要涉及到ORMC鞥面的save()操作，都会自动执行我定义的my_callback函数了。</p>
+<p>例如：</p>
+<pre><code>a3 = Author.objects.create(name=&apos;测试信号-作者&apos;)
+b3 = Book.objects.create(title=&apos;测试信号-书&apos;)
+</code></pre><p>输出：</p>
+<pre><code>&lt;class &apos;app02.models.Author&apos;&gt;
+{&apos;signal&apos;: &lt;django.db.models.signals.ModelSignal object at 0x108e0d198&gt;, &apos;instance&apos;: &lt;Author: 测试信号-作者&gt;, &apos;raw&apos;: False, &apos;using&apos;: &apos;default&apos;, &apos;update_fields&apos;: None}
+要保存了啊！
+------------------------------------------------------------------------------------------------------------------------
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.001) INSERT INTO `app02_author` (`name`) VALUES (&apos;测试信号-作者&apos;); args=[&apos;测试信号-作者&apos;]
+&lt;class &apos;app02.models.Book&apos;&gt;
+{&apos;signal&apos;: &lt;django.db.models.signals.ModelSignal object at 0x108e0d198&gt;, &apos;instance&apos;: &lt;Book: 测试信号-书&gt;, &apos;raw&apos;: False, &apos;using&apos;: &apos;default&apos;, &apos;update_fields&apos;: None}
+要保存了啊！
+------------------------------------------------------------------------------------------------------------------------
+(0.001) INSERT INTO `app02_book` (`title`) VALUES (&apos;测试信号-书&apos;); args=[&apos;测试信号-书&apos;]
+</code></pre><h3 id="使用装饰器方式监听信号"><a href="#使用装饰器方式监听信号" class="headerlink" title="使用装饰器方式监听信号"></a>使用装饰器方式监听信号</h3><h1 id="使用装饰器方式"><a href="#使用装饰器方式" class="headerlink" title="使用装饰器方式"></a>使用装饰器方式</h1><pre><code>from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
+
+@receiver(pre_save)
+def my_callback(sender, **kwargs):
+    print(sender)
+    print(kwargs)
+    print(&quot;要保存了啊！&quot;)
+    print(&apos;-&apos; * 120)
+</code></pre><h2 id="七-自定义信号"><a href="#七-自定义信号" class="headerlink" title="七. 自定义信号"></a>七. 自定义信号</h2><p>上面列出来的都是Django框架内置的信号，当然我们还可以自定义信号。</p>
+<h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><p>所有信号都是 django.dispatch.Signal 的实例。 providing_args是一个列表，由信号将提供给监听者的参数名称组成。 理论上是这样，但是实际上并没有任何检查来保证向监听者提供了这些参数。</p>
+<p>举个例子：</p>
+<pre><code>from django.dispatch import Signal
+
+bath_done = Signal(providing_args=[&apos;amount&apos;, &apos;temperature&apos;])
+</code></pre><p>这里定义了一个洗澡水烧好了的信号，它接受两个参数：amount表示水量，temperature表示温度</p>
+<h3 id="注册receiver"><a href="#注册receiver" class="headerlink" title="注册receiver"></a>注册receiver</h3><pre><code>from django.dispatch import receiver
+
+@receiver(bath_done)
+def my_action(sender, **kwargs):
+    print(sender)
+    print(kwargs)
+    print(&apos;脱衣服泡个澡吧！&apos;)
+</code></pre><h3 id="触发信号"><a href="#触发信号" class="headerlink" title="触发信号"></a>触发信号</h3><p>斯嘉丽烧好了一浴缸40度的洗澡水，杜兰特要开喝了。</p>
+<pre><code>bath_done.send(sender=&apos;斯嘉丽&apos;, amount=&apos;一浴缸&apos;, temperature=&apos;40°&apos;)
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/01/25/Django/Django - 信号/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/01/25/Django/Django - 信号/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="https://github.com/kokohui " style="border-bottom: none;">KongHui</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+
+    </div>
+</body>
+
+
+
+ 	
+</html>

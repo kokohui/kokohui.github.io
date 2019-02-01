@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="KongHui">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">KONGHUI</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/DRF框架/">DRF框架</a></li><li><a class="category-link" href="/categories/Django-信号/">Django - 信号</a></li><li><a class="category-link" href="/categories/Python/">Python</a></li><li><a class="category-link" href="/categories/Redis/">Redis</a></li><li><a class="category-link" href="/categories/其他/">其他</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/kokohui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.cnblogs.com/konghui" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(/img/z6.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Django REST framework 版本控制</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Django-REST-framework-版本控制"><a href="#Django-REST-framework-版本控制" class="headerlink" title="Django REST framework 版本控制"></a>Django REST framework 版本控制</h1><h2 id="为什么需要版本控制"><a href="#为什么需要版本控制" class="headerlink" title="为什么需要版本控制"></a>为什么需要版本控制</h2><p>API 版本控制允许我们在不同的客户端之间更改行为（同一个接口的不同版本会返回不同的数据）。 DRF提供了许多不同的版本控制方案。</p>
+<p>可能会有一些客户端因为某些原因不再维护了，但是我们后端的接口还要不断的更新迭代，这个时候通过版本控制返回不同的内容就是一种不错的解决方案。</p>
+<h2 id="DRF提供了5种版本控制方案"><a href="#DRF提供了5种版本控制方案" class="headerlink" title="DRF提供了5种版本控制方案"></a>DRF提供了5种版本控制方案</h2><pre><code># 将版本信息放到请求头中:
+class AcceptHeaderVersioning(BaseVersioning):
+    pass
+
+# 将版本信息放到URL中:
+class URLPathVersioning(BaseVersioning):
+    pass
+
+# 通过namespace来区分版本
+class NamespaceVersioning(BaseVersioning):
+    pass
+
+# 通过主机名来区分版本
+class HostVersioning(BaseVerioning):
+    pass
+
+# 通过URL查询参数区分版本
+class QueryParameterVersioning(BaseVersioning)
+</code></pre><hr>
+<h2 id="版本控制系统的使用"><a href="#版本控制系统的使用" class="headerlink" title="版本控制系统的使用"></a>版本控制系统的使用</h2><p>这里我们介绍 将版本信息放到URL中 和 通过URL查询参数区分版本</p>
+<h4 id="urls-py"><a href="#urls-py" class="headerlink" title="urls.py"></a>urls.py</h4><pre><code>urlpatterns = [
+    ...
+    url(r&apos;^(?P&lt;version&gt;[v1|v2]+)/publishers/$&apos;, views.PublisherViewSet.as_view({&apos;get&apos;: &apos;list&apos;, &apos;post&apos;: &apos;create&apos;})),
+
+    url(r&apos;^(?P&lt;version&gt;[v1|v2]+)/publishers/(?P&lt;pk&gt;\d+)/$&apos;, views.PublisherViewSet.as_view({&apos;get&apos;: &apos;retrieve&apos;, &apos;put&apos;: &apos;update&apos;, &apos;delete&apos;: &apos;destroy&apos;})),
+]    
+</code></pre><h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><h4 id="v1-books"><a href="#v1-books" class="headerlink" title="/v1/books/"></a>/v1/books/</h4><pre><code>REST_FRAMEWORK = {
+    &apos;DEFAULT_VERSIONING_CLASS&apos;: &apos;rest_framework.versioning.URLPathVersioning&apos;,
+    &apos;DEFAULT_VERSION&apos;: &apos;v1&apos;,  # 默认的版本
+    &apos;ALLOWED_VERSIONS&apos;: [&apos;v1&apos;, &apos;v2&apos;],  # 有效的版本
+    &apos;VERSION_PARAM&apos;: &apos;version&apos;,  # 版本的参数名与URL conf中一致
+}
+</code></pre><h4 id="books-version-v1"><a href="#books-version-v1" class="headerlink" title="/books/?version=v1"></a>/books/?version=v1</h4><pre><code>REST_FRAMEWORK = {
+    &apos;DEFAULT_VERSIONING_CLASS&apos;: &apos;rest_framework.versioning.QueryParameterVersioning&apos;,
+    &apos;DEFAULT_VERSION&apos;: &apos;v1&apos;,  # 默认的版本
+    &apos;ALLOWED_VERSIONS&apos;: [&apos;v1&apos;, &apos;v2&apos;],  # 有效的版本
+    &apos;VERSION_PARAM&apos;: &apos;version&apos;,  # 版本的参数名与URL conf中一致
+}
+</code></pre><h3 id="局部配置"><a href="#局部配置" class="headerlink" title="局部配置"></a>局部配置</h3><p>注意，通常我们是不会单独给某个视图设置版本控制的，如果你确实需要给单独的视图设置版本控制，你可以在视图中设置versioning_class属性，如下</p>
+<pre><code>class PublisherViewSet(ModelViewSet):
+    ...    
+    versioning_class = URLPathVersioning
+</code></pre><h3 id="获取版本信息"><a href="#获取版本信息" class="headerlink" title="获取版本信息"></a>获取版本信息</h3><p>我们在视图中可以通过访问 <code>request.version</code> 来获取当前请求的具体版本，然后根据不同的版本来返回不同的内容：</p>
+<p>我们可以在视图中自定义具体的行为，下面以不同的版本返回不同的序列化类为例</p>
+<pre><code>class PublisherViewSet(ModelViewSet):
+
+    def get_serializer_class(self):
+        #不同的版本使用不同的序列化类
+        if self.request.version == &apos;v1&apos;:
+            return PublisherModelSerializerVersion1
+        else:
+            return PublisherModelSerializer
+    queryset = models.Publisher.objects.all()
+</code></pre>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/20/Django REST framework/Django REST framework 版本控制/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/20/Django REST framework/Django REST framework 版本控制/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="https://github.com/kokohui " style="border-bottom: none;">KongHui</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+
+    </div>
+</body>
+
+
+
+ 	
+</html>
